@@ -76,7 +76,7 @@ html {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  column-gap: 3px;
+  column-gap: 2px;
   row-gap: 5px;
 }
 
@@ -148,5 +148,16 @@ html {
   width: 80%;
   height: 90%;
   background-color: green;
-  
+}
+.staging {
+  grid-row: 2/6;
+  grid-column: 4/5;
+  display: grid;
+}
+.staging #staging-box {
+  background-color: maroon;
+  width: 40%;
+  justify-self: end;
+  height: 90%;
+  border: solid 4px black;
 }
