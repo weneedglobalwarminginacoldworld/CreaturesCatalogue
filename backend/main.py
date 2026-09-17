@@ -4,6 +4,8 @@ I will use path parameters to receive edit
 proposals from a client and return the relevant changes
 '''
 
+from typing import List, Dict
+import typing
 import msgspec
 from starlette.applications import Starlette
 from starlette.requests import Request
@@ -14,12 +16,44 @@ import string
 
 from starlette.routing import Route
 
-user_file = {}
+user_file: Dict[str, list[str]] = {'':[]}
 
 class Properties(msgspec.Struct):
     bg_color: str = 'red'
 
 decoder = msgspec.json.Decoder(type=Properties)
+
+'''
+I will have the html as a list of strings and simply
+loop and do different string operations on the different
+strings as needed
+'''
+class parser(msgspec.Struct, kw_only=True):
+    html_list: list[str]
+
+    @classmethod
+    def find(cls, to_find: str, list_html: list):
+        position = -1
+        for i in list_html:
+            position+=1
+            if to_find in i:
+                return {position:i}
+            
+
+    @classmethod
+    def modify(cls, to_modify: dict, template: string.Template):
+        #The idea here is we add the to_modify dict to a relevant template
+        pass
+
+
+test_template = string.Template('''
+                                <html>
+                                  <head></head>
+                                  <body>
+                                    <h1>${h1}</h1>
+                                  </body>
+                                </html>
+                                ''')
 
 def main_grid(request):
     html = '''<!DOCTYPE html>
