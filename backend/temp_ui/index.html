@@ -1,9 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hello There</h1>
+    <div class="edit-screen" id="edit-screen">
+      <div id="cpanel" class="cpanel">
+        <div id="wizard-btn" class="wizard-btn">
+          <label>Wizard</label>
+          <img src="adn-p.png" class="wiz-logo" />
+        </div>
+      </div>
+      <br><br>
+
+      <div id="screen-view" class="screen-view">
+        <div id="wizard" class="wizard">
+          <div id="form-one" class="form-one">
+            <label id="prop-name" class="prop-name">
+              PropertyName
+              <input type="text" required />
+            </label>
+            <label id="prop-type" class="prop-type">
+              PropertyType
+              <input type="text" required />
+            </label>
+            <label id="prop-dimensions" class="prop-dimensions">
+              Dimensions
+              <input type="text" required />
+            </label>
+            <label id="prop-bg-color" class="prop-bg-color">
+              Color
+              <input type="text" />
+            </label>
+            <label id="prop-text" class="prop-text">
+              Text
+              <input type="text" />
+            </label>
+            <label id="prop-link" class="prop-link">
+              Link
+              <input type="url" />
+            </label>
+            <label id="upload-time" class="upload-time"></label>
+          </div>
+          <div id="form-two" class="form-two"></div>
+          <div id="final-form" class="final-form"></div>
+          <div id="cont-panel" class="cont-panel">
+            <div id="go-back" class="go-back">
+              <label>Back</label>
+            </div>
+            <div id="save-me" class="save-me">
+              <label>Save</label>
+            </div>
+            <div id="next-btn" class="next-btn">
+              <label>Next</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
-</html>

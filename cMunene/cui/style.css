@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: plum;
+}
+#frame {
+  display: block;
+  position: absolute;
+  max-width: 450px;
+  max-height:450px;
+  left: 25%;
+  top: 15%;
+}
+#frame img {
+  width: 100%;
+  height: 100%;
+  left: 25%;
+}
+#choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  position: absolute;
+  gap: 7px;
+  width: 60%;
+  top: 20%;
+  left: 20%;
+}
+#choices div {
+  display: flex;
+  grid-column: 1/4;
+  justify-content: center;
+  background-color: pink;
+  box-shadow: 4px 4px palevioletred;
+  transition: transform 0.3s;
+}
+#choices div .hidden {
+  display: none;
+}
+#choices div p {
+  transition: display 2s;
+}
+#choices div:hover > p {
+  display: none;
+}
+#choices div:hover > .hidden {
+  display: flex;
+}
+#choices div:active {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px black;
+}

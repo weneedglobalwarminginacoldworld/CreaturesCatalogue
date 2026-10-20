@@ -1,10 +1,10 @@
-const books = [
+/*const books = [
   { title: "Dune", author: "Frank Herbert", pages: 412, read: true },
   { title: "The Hobbit", author: "J.R.R. Tolkien", pages: 310, read: true },
   { title: "Neuromancer", author: "William Gibson", pages: 271, read: false },
   { title: "Foundation", author: "Isaac Asimov", pages: 255, read: false },
   { title: "1984", author: "George Orwell", pages: 328, read: true }
-];
+]; */
 
 /* async function getData() {
   const response =  await fetch('https://jsonplaceholder.typicode.com/todos/1')
@@ -12,7 +12,7 @@ const books = [
   console.log(data)
 }; */
 
-async function checkStatus(response) {
+/*async function checkStatus(response) {
   if (!response.ok) {
     throw new Error(`Get Failed: ${response.status}`)
   }
@@ -36,7 +36,27 @@ const getBooks = b => {
   };
   console.log(titles) 
 };
-
+*/
 // getData()
 // getBooks(books);
+/*
+const nextButton = document.querySelector('#next-button')
+
+function nextWizard(event) {
+  event.preventDefault();
+  // get data from form
+  const form = document.querySelector('#events')
+  const data = new FormData(form)
+  const labels = Array.from(document.querySelectorAll('label'))
+  const inputs = Array.from(document.querySelectorAll('input'))
+  // the logical thing here would be to write that data somewhere
+  // for persistence. Not now though
+  const labelsInputs = labels.concat(inputs)
+  labelsInputs.forEach((i) => {i.classList.add('hidden')})
+  //now i activae the next section
+  
+};
+
+nextButton.addEventListener('click', nextWizard) */
+
 
